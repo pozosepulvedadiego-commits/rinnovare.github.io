@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Rinnovare | Construcción e Infraestructura</title>
+  <title>Rinnovare | Ingeniería y Construcción</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- GOOGLE FONTS -->
@@ -13,7 +13,7 @@
       --black: #111111;
       --white: #ffffff;
       --gray: #6b7280;
-      --accent: #0f4c5c;
+      --accent: #c9b27c;
     }
 
     * {
@@ -30,9 +30,8 @@
 
     /* HEADER */
     header {
-      background: rgba(0,0,0,0.85);
-      color: var(--white);
-      padding: 20px 40px;
+      background: rgba(0,0,0,0.9);
+      padding: 18px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -41,10 +40,8 @@
       z-index: 10;
     }
 
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 22px;
-      letter-spacing: 2px;
+    .logo img {
+      height: 48px;
     }
 
     nav a {
@@ -60,8 +57,8 @@
 
     /* HERO */
     .hero {
-      background: 
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
       background-size: cover;
       background-position: center;
@@ -80,6 +77,7 @@
       font-size: 18px;
       max-width: 800px;
       margin: auto;
+      color: #e5e5e5;
     }
 
     /* SECTIONS */
@@ -104,10 +102,9 @@
     }
 
     .service-box {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.95);
       padding: 35px;
       border-radius: 10px;
-      backdrop-filter: blur(3px);
     }
 
     .service-box h3 {
@@ -134,7 +131,7 @@
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        gap: 12px;
+        gap: 14px;
       }
 
       nav {
@@ -143,6 +140,7 @@
 
       nav a {
         margin: 0 10px;
+        font-size: 15px;
       }
 
       .hero h2 {
@@ -152,10 +150,6 @@
       section {
         padding: 70px 25px;
       }
-
-      .services {
-        gap: 25px;
-      }
     }
   </style>
 </head>
@@ -163,7 +157,10 @@
 <body>
 
 <header>
-  <h1>RINNOVARE</h1>
+  <div class="logo">
+    <img src="logo-rinnovare.png" alt="Rinnovare">
+  </div>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="construccion.html">Construcción</a>
@@ -175,10 +172,10 @@
 </header>
 
 <section class="hero">
-  <h2>Soluciones integrales en construcción e infraestructura</h2>
+  <h2>Ingeniería, construcción y renovación</h2>
   <p>
-    Desarrollamos proyectos con foco en calidad, eficiencia y cumplimiento normativo,
-    entregando soluciones confiables para clientes públicos y privados.
+    Desarrollamos proyectos con altos estándares de calidad,
+    cumplimiento normativo y soluciones eficientes para cada desafío.
   </p>
 </section>
 
@@ -189,34 +186,33 @@
     <div class="service-box">
       <h3>Construcción y Remodelación</h3>
       <p>
-        Ejecutamos proyectos de construcción y remodelación en infraestructura
-        habitacional, comercial, educacional y de eventos, asegurando altos estándares
-        de calidad, control técnico y cumplimiento normativo.
+        Proyectos habitacionales, comerciales, educacionales y de eventos,
+        ejecutados con control técnico, planificación y excelencia constructiva.
       </p>
     </div>
 
     <div class="service-box">
       <h3>Mantención de Infraestructura</h3>
       <p>
-        Realizamos servicios de mantención preventiva y correctiva, prolongando la vida
-        útil de las instalaciones y garantizando continuidad operativa y seguridad.
+        Mantención preventiva y correctiva que garantiza continuidad operativa,
+        seguridad y prolongación de la vida útil de las instalaciones.
       </p>
     </div>
 
     <div class="service-box">
       <h3>Soluciones Modulares</h3>
       <p>
-        Implementamos soluciones modulares flexibles y desmontables para proyectos
-        temporales o permanentes, adaptadas a distintos usos y emplazamientos.
+        Sistemas modulares flexibles, desmontables y adaptables
+        a distintos usos, ubicaciones y necesidades operativas.
       </p>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Rinnovare · Construcción · Mantención · Modulares  
+  © 2026 Rinnovare · Ingeniería · Construcción · Renovación  
   <br>
-  info@rinnovare.cl · +56 9 6147 5993
+  contacto@rinnovare.cl · +56 9 6147 5993
 </footer>
 
 </body>
