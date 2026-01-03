@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Rinnovare | Infraestructura, Mantención y Soluciones Modulares</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rinnovare ofrece servicios de construcción, mantención de infraestructura y arriendo de estructuras modulares para empresas, colegios y eventos.">
+  <title>Rinnovare | Construcción, Mantención y Estructuras Modulares</title>
+  <meta name="description" content="Rinnovare es una empresa especializada en construcción, mantención de infraestructura y arriendo de estructuras modulares para eventos.">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -26,11 +26,12 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--black);
       background-color: var(--white);
-      line-height: 1.6;
+      color: var(--black);
+      line-height: 1.7;
     }
 
+    /* HEADER */
     header {
       background: var(--black);
       color: var(--white);
@@ -38,19 +39,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 22px;
-      font-weight: 700;
       letter-spacing: 1px;
     }
 
     nav a {
       color: var(--white);
-      margin-left: 25px;
       text-decoration: none;
+      margin-left: 25px;
       font-weight: 500;
     }
 
@@ -58,18 +61,15 @@
       color: var(--accent);
     }
 
+    /* HERO */
     .hero {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-                  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+      background-size: cover;
+      background-position: center;
       color: var(--white);
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      padding: 0 40px;
-    }
-
-    .hero-content {
-      max-width: 650px;
+      padding: 120px 40px;
+      text-align: center;
     }
 
     .hero h2 {
@@ -80,27 +80,42 @@
 
     .hero p {
       font-size: 18px;
-      margin-bottom: 30px;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 35px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 28px;
       background: var(--accent);
       color: var(--white);
+      padding: 15px 35px;
+      border-radius: 4px;
       text-decoration: none;
       font-weight: 600;
-      border-radius: 4px;
-      margin-right: 15px;
     }
 
-    .btn.secondary {
-      background: transparent;
-      border: 2px solid var(--white);
+    .btn:hover {
+      opacity: 0.9;
     }
 
+    /* SECTIONS */
     section {
       padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    section p {
+      color: var(--gray);
+      font-size: 17px;
+      margin-bottom: 20px;
     }
 
     .services {
@@ -111,45 +126,40 @@
 
     .service-box {
       background: var(--light-gray);
-      padding: 40px 30px;
+      padding: 35px;
       border-radius: 6px;
     }
 
-    .service-box h3 {
+    .service-box h4 {
       font-family: 'Montserrat', sans-serif;
       margin-bottom: 15px;
-      font-size: 20px;
     }
 
-    .service-box p {
-      color: var(--gray);
-    }
-
-    .why {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-    }
-
-    .why h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-
+    /* FOOTER */
     footer {
       background: var(--black);
       color: var(--white);
-      padding: 40px;
       text-align: center;
+      padding: 40px;
       font-size: 14px;
     }
 
-    footer p {
-      margin-bottom: 10px;
-    }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-    @media(max-width: 768px) {
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
       .hero h2 {
         font-size: 32px;
       }
@@ -162,49 +172,62 @@
 <header>
   <h1>RINNOVARE</h1>
   <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Proyectos</a>
-    <a href="#">Contacto</a>
+    <a href="index.html">Inicio</a>
+    <a href="construccion.html">Construcción</a>
+    <a href="mantencion.html">Mantención</a>
+    <a href="modulares.html">Modulares</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Infraestructura, mantención y soluciones modulares para proyectos exigentes</h2>
-    <p>Desarrollamos, mantenemos y optimizamos infraestructura para empresas, colegios y centros de eventos, con un enfoque técnico, preventivo y eficiente.</p>
-    <a href="https://wa.me/56961475993" class="btn">Cotizar por WhatsApp</a>
-    <a href="#servicios" class="btn secondary">Ver servicios</a>
-  </div>
+  <h2>Soluciones integrales en infraestructura y eventos</h2>
+  <p>
+    En Rinnovare desarrollamos proyectos de construcción, mantención preventiva y
+    arriendo de estructuras modulares, entregando soluciones eficientes, seguras
+    y alineadas a los más altos estándares profesionales.
+  </p>
+  <a href="contacto.html" class="btn">Solicitar cotización</a>
 </section>
 
-<section id="servicios">
+<section>
+  <h3>Nuestras líneas de negocio</h3>
+
   <div class="services">
     <div class="service-box">
-      <h3>Construcción y Remodelación</h3>
-      <p>Ejecutamos proyectos de construcción y remodelación de infraestructura habitacional, comercial y educacional, garantizando calidad, cumplimiento normativo y eficiencia en cada etapa.</p>
+      <h4>Construcción y Remodelación</h4>
+      <p>
+        Ejecutamos proyectos de construcción y remodelación de infraestructura
+        habitacional, comercial, educacional y de eventos, asegurando calidad,
+        cumplimiento normativo y una ejecución eficiente.
+      </p>
     </div>
 
     <div class="service-box">
-      <h3>Mantención de Infraestructura</h3>
-      <p>Planes de mantención preventiva y correctiva mediante contratos anuales, orientados a prolongar la vida útil de la infraestructura y reducir costos operativos.</p>
+      <h4>Mantención de Infraestructura</h4>
+      <p>
+        Ofrecemos planes anuales de mantención preventiva y correctiva,
+        orientados a colegios, locales comerciales y centros de eventos,
+        prolongando la vida útil de la infraestructura.
+      </p>
     </div>
 
     <div class="service-box">
-      <h3>Estructuras Modulares Overlay</h3>
-      <p>Arriendo de soluciones modulares de rápido montaje para eventos: oficinas, tarimas, cierres perimetrales, baños y estructuras temporales adaptables.</p>
+      <h4>Estructuras Modulares para Eventos</h4>
+      <p>
+        Arriendo de estructuras modulares overlay de rápido armado y desmontaje,
+        ideales para oficinas temporales, tarimas, cierres perimetrales, baños
+        y soluciones especiales para eventos.
+      </p>
     </div>
   </div>
-</section>
-
-<section class="why">
-  <h2>¿Por qué elegir Rinnovare?</h2>
-  <p>Enfoque técnico · Respuesta oportuna · Soluciones a medida · Compromiso con la calidad</p>
 </section>
 
 <footer>
-  <p>📞 +56 9 6147 5993 | ✉️ info@rinnovare.cl</p>
-  <p>© Rinnovare. Todos los derechos reservados.</p>
+  © 2026 Rinnovare · Infraestructura & Soluciones Modulares  
+  <br>
+  Contacto: +56 9 6147 5993 · info@rinnovare.cl
 </footer>
 
 </body>
