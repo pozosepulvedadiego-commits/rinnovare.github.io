@@ -1,11 +1,6 @@
-:root {
-  --black: #0f0f0f;
-  --white: #ffffff;
-  --gray: #6b7280;
-  --light-gray: #f3f4f6;
-  --gold: #c9a24d;
-}
-
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,141 +8,170 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--white);
-  color: var(--black);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  background-color: #ffffff;
   line-height: 1.6;
 }
 
-/* HEADER */
-.header {
-  background: var(--black);
-  padding: 18px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* =========================
+   HEADER
+========================= */
+header {
+  background: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* LOGO RINNOVARE – CONTROL TOTAL */
-.logo {
-  height: 42px;          /* tamaño corporativo */
+/* LOGO */
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header-logo img {
+  height: 72px;        /* tamaño correcto móvil */
   width: auto;
-  max-width: 180px;      /* evita logos gigantes */
-  display: block;
-  object-fit: contain;
+  max-width: 90%;
 }
 
 /* NAV */
-.nav a {
-  color: var(--white);
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
   text-decoration: none;
-  margin-left: 28px;
   font-size: 15px;
-  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-.nav a:hover {
-  color: var(--gold);
+nav a:hover {
+  color: #d4af37;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
+  height: calc(100vh - 160px);
+  background-image: url("hero.jpg"); /* tu imagen principal */
   background-size: cover;
   background-position: center;
-  padding: 120px 40px;
-  color: var(--white);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-content {
-  max-width: 700px;
+  position: relative;
+  color: #ffffff;
+  padding: 0 20px;
+  max-width: 720px;
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  color: #e5e5e5;
 }
 
-/* BUTTON */
 .btn {
   display: inline-block;
-  background: var(--gold);
-  color: var(--black);
+  background: #d4af37;
+  color: #111;
   padding: 14px 28px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 4px;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  background: #c19d2c;
 }
 
-/* SERVICES */
-.services {
-  padding: 80px 40px;
-  background: var(--light-gray);
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 50px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+/* =========================
+   SECCIONES
+========================= */
+.section {
+  padding: 64px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-.service-card {
-  background: var(--white);
-  padding: 35px;
-  border-radius: 8px;
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
 }
 
-.service-card h3 {
-  margin-bottom: 15px;
+/* TARJETAS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 28px;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
   font-size: 20px;
 }
 
-.service-card p {
-  color: var(--gray);
+.card p {
+  color: #555;
 }
 
-/* FOOTER */
-.footer {
-  background: var(--black);
-  color: var(--white);
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #111;
+  color: #aaa;
   text-align: center;
-  padding: 30px;
+  padding: 28px 16px;
   font-size: 14px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 15px;
-  }
+/* =========================
+   RESPONSIVE DESKTOP
+========================= */
+@media (min-width: 768px) {
 
-  .nav a {
-    margin: 0 12px;
+  .header-logo img {
+    height: 96px;   /* logo más protagonista en desktop */
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 52px;
+  }
+
+  .hero p {
+    font-size: 20px;
   }
 }
