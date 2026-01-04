@@ -2,218 +2,80 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Rinnovare | Ingeniería y Construcción</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --black: #111111;
-      --white: #ffffff;
-      --gray: #6b7280;
-      --accent: #c9b27c;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--black);
-      line-height: 1.7;
-    }
-
-    /* HEADER */
-    header {
-      background: rgba(0,0,0,0.9);
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo img {
-      height: 48px;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 22px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    /* HERO */
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
-      background-size: cover;
-      background-position: center;
-      padding: 120px 40px;
-      color: var(--white);
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-      color: #e5e5e5;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 90px 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 34px;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .service-box {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 35px;
-      border-radius: 10px;
-    }
-
-    .service-box h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-
-    .service-box p {
-      color: var(--gray);
-      font-size: 16px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-      padding: 50px 30px;
-      font-size: 14px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      nav {
-        text-align: center;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 15px;
-      }
-
-      .hero h2 {
-        font-size: 32px;
-      }
-
-      section {
-        padding: 70px 25px;
-      }
-    }
-  </style>
+  <title>Rinnovare | Ingeniería, Construcción y Renovación</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="logo-rinnovare.png" alt="Rinnovare">
-  </div>
-
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="construccion.html">Construcción</a>
-    <a href="mantencion.html">Mantención</a>
-    <a href="modulares.html">Modulares</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Ingeniería, construcción y renovación</h2>
-  <p>
-    Desarrollamos proyectos con altos estándares de calidad,
-    cumplimiento normativo y soluciones eficientes para cada desafío.
-  </p>
-</section>
-
-<section>
-  <h2>Nuestras líneas de negocio</h2>
-
-  <div class="services">
-    <div class="service-box">
-      <h3>Construcción y Remodelación</h3>
-      <p>
-        Proyectos habitacionales, comerciales, educacionales y de eventos,
-        ejecutados con control técnico, planificación y excelencia constructiva.
-      </p>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="logo-rinnovare.png" alt="Rinnovare" class="logo">
     </div>
 
-    <div class="service-box">
-      <h3>Mantención de Infraestructura</h3>
-      <p>
-        Mantención preventiva y correctiva que garantiza continuidad operativa,
-        seguridad y prolongación de la vida útil de las instalaciones.
-      </p>
-    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="construccion.html">Construcción</a>
+      <a href="mantencion.html">Mantención</a>
+      <a href="modulares.html">Modulares</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
 
-    <div class="service-box">
-      <h3>Soluciones Modulares</h3>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Ingeniería, Construcción y Renovación</h1>
       <p>
-        Sistemas modulares flexibles, desmontables y adaptables
-        a distintos usos, ubicaciones y necesidades operativas.
+        Desarrollamos soluciones integrales en infraestructura, mantenimiento
+        y estructuras modulares para proyectos residenciales, comerciales,
+        educacionales y de eventos.
       </p>
+      <a href="contacto.html" class="btn">Solicitar cotización</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2026 Rinnovare · Ingeniería · Construcción · Renovación  
-  <br>
-  contacto@rinnovare.cl · +56 9 6147 5993
-</footer>
+  <!-- SERVICIOS -->
+  <section class="services">
+    <h2>Nuestras líneas de negocio</h2>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Construcción y Remodelación</h3>
+        <p>
+          Ejecutamos proyectos de construcción y remodelación de infraestructura
+          habitacional, comercial, educacional y de eventos, garantizando calidad,
+          cumplimiento normativo y eficiencia operativa.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Mantención de Infraestructura</h3>
+        <p>
+          Ofrecemos planes anuales de mantención preventiva y correctiva,
+          enfocados en prolongar la vida útil de las instalaciones y reducir
+          costos operacionales.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Estructuras Modulares</h3>
+        <p>
+          Arriendo de soluciones modulares de rápido montaje y desmontaje
+          para eventos, incluyendo oficinas, tarimas, cierres perimetrales
+          y servicios complementarios.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Rinnovare · Ingeniería · Construcción · Renovación</p>
+  </footer>
 
 </body>
 </html>
