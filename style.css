@@ -28,9 +28,13 @@ body {
   justify-content: space-between;
 }
 
+/* LOGO RINNOVARE – CONTROL TOTAL */
 .logo {
-  height: 48px;
+  height: 42px;          /* tamaño corporativo */
   width: auto;
+  max-width: 180px;      /* evita logos gigantes */
+  display: block;
+  object-fit: contain;
 }
 
 /* NAV */
