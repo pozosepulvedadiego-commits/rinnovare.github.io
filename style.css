@@ -7,10 +7,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
   color: #111;
-  background-color: #ffffff;
   line-height: 1.6;
 }
 
@@ -18,10 +23,8 @@ body {
    HEADER
 ========================= */
 header {
-  background: rgba(0, 0, 0, 0.9);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #0b0b0b;
+  width: 100%;
 }
 
 /* LOGO */
@@ -29,11 +32,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 10px;
 }
 
 .header-logo img {
-  height: 72px;        /* tamaño correcto móvil */
+  height: 64px;
   width: auto;
   max-width: 90%;
 }
@@ -42,7 +45,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  gap: 22px;
+  gap: 20px;
   padding-bottom: 14px;
   flex-wrap: wrap;
 }
@@ -50,8 +53,7 @@ nav {
 nav a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
-  letter-spacing: 0.5px;
+  font-size: 14px;
 }
 
 nav a:hover {
@@ -59,56 +61,42 @@ nav a:hover {
 }
 
 /* =========================
-   HERO
+   HERO (ARREGLADO)
 ========================= */
 .hero {
-  height: calc(100vh - 160px);
-  background-image: url("hero.jpg"); /* tu imagen principal */
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  background: #6b6b6b; /* gris elegante temporal */
   display: flex;
   align-items: center;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
 .hero-content {
-  position: relative;
   color: #ffffff;
   padding: 0 20px;
   max-width: 720px;
 }
 
 .hero h1 {
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 16px;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 17px;
   margin-bottom: 24px;
-  color: #e5e5e5;
+  color: #eaeaea;
 }
 
 .btn {
   display: inline-block;
   background: #d4af37;
   color: #111;
-  padding: 14px 28px;
+  padding: 14px 26px;
   font-weight: 600;
   text-decoration: none;
   border-radius: 4px;
-}
-
-.btn:hover {
-  background: #c19d2c;
 }
 
 /* =========================
@@ -121,57 +109,51 @@ nav a:hover {
 }
 
 .section h2 {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 32px;
 }
 
-/* TARJETAS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
 .card {
-  background: #f4f4f4;
-  padding: 28px;
+  background: #f2f2f2;
+  padding: 26px;
   border-radius: 6px;
 }
 
 .card h3 {
-  margin-bottom: 12px;
-  font-size: 20px;
-}
-
-.card p {
-  color: #555;
+  margin-bottom: 10px;
 }
 
 /* =========================
    FOOTER
 ========================= */
 footer {
-  background: #111;
+  background: #0b0b0b;
   color: #aaa;
   text-align: center;
-  padding: 28px 16px;
+  padding: 26px 16px;
   font-size: 14px;
 }
 
 /* =========================
-   RESPONSIVE DESKTOP
+   DESKTOP
 ========================= */
 @media (min-width: 768px) {
 
   .header-logo img {
-    height: 96px;   /* logo más protagonista en desktop */
+    height: 90px;
   }
 
   .hero h1 {
-    font-size: 52px;
+    font-size: 50px;
   }
 
-  .hero p {
-    font-size: 20px;
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
